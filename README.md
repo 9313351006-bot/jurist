@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НИКОЛАЕВ Илья Викторович - Юрист</title>
+    <!-- Библиотека для генерации QR-кода -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Строгий темно-синий цвет */
+            --bg: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+        }
+        body {
+            background-color: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary), #1e40af);
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+        .surname {
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 0 8px 0;
+            line-height: 1;
+        }
+        .name-patronymic {
+            font-size: 22px;
+            font-weight: 500;
+            margin: 0 0 12px 0;
+            color: #e5e7eb;
+        }
+        .profession {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fbbf24; /* Золотой акцент */
+            font-weight: 600;
+            margin: 0;
+            padding-top: 5px;
+        }
+        .body-content {
+            padding: 30px 25px;
+        }
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-main);
+            background: #f9fafb;
+            padding: 16px;
+            border-radius: 12px;
+            transition: background 0.2s, transform 0.1s;
+            border: 1px solid #f3f4f6;
+        }
+        .contact-item:active {
+            transform: scale(0.98);
+        }
+        .icon {
+            width: 42px;
+            height: 42px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+        .icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+        .info-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 3px;
+        }
+        .info-value {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .qr-section {
+            text-align: center;
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 25px;
+        }
+        .qr-title {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        #qrcode img {
+            border-radius: 12px;
+            padding: 10px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <h1 class="surname">НИКОЛАЕВ</h1>
+        <h2 class="name-patronymic">Илья Викторович</h2>
+        <p class="profession">Юрист по налогообложению</p>
+    </div>
+    
+    <div class="body-content">
+        <div class="contact-list">
+            <!-- Телефон -->
+            <a href="tel:+79313351006" class="contact-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="info">
+                    <span class="info-label">Телефон</span>
+                    <span class="info-value">+7 (931) 335-10-06</span>
+                </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:9313351006@mail.ru" class="contact-item">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="info">
+                    <span class="info-label">Email</span>
+                    <span class="info-value">9313351006@mail.ru</span>
+                </div>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/ilya_taxlawyer" target="_blank" class="contact-item">
+                <div class="icon" style="background: #0088cc;">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                </div>
+                <div class="info">
+                    <span class="info-label">Telegram</span>
+                    <span class="info-value">@ilya_taxlawyer</span>
+                </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/79313351006" target="_blank" class="contact-item">
+                <div class="icon" style="background: #25D366;">
+                    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                </div>
+                <div class="info">
+                    <span class="info-label">WhatsApp</span>
+                    <span class="info-value">+7 (931) 335-10-06</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="qr-section">
+            <h3 class="qr-title">Отсканируйте, чтобы сохранить контакт</h3>
+            <!-- Сюда скрипт ниже автоматически вставит QR код -->
+            <div id="qrcode"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Данные для добавления в контакты телефона
+    const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:Николаев;Илья;Викторович;;\nFN:Илья Викторович Николаев\nTITLE:Юрист по налогообложению\nTEL;TYPE=WORK,VOICE:+79313351006\nEMAIL;TYPE=PREF,INTERNET:9313351006@mail.ru\nURL:https://t.me/ilya_taxlawyernEND:VCARD`;
+
+    // Создаем QR-код
+    new QRCode(document.getElementById("qrcode"), {
+        text: vcard,
+        width: 180,
+        height: 180,
+        colorDark : "#1f2937",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.L
+    });
+</script>
+
+</body>
+</html>
