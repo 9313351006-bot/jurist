@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>НИКОЛАЕВ Илья Викторович | Юрист по налогу на недвижимость</title>
+    <title>ИЛЬЯ Николаев | Юрист по недвижимости</title>
     <style>
         :root {
             --bg-color: #f4f6f9;
@@ -11,7 +11,8 @@
             --text-main: #2c3e50;
             --text-muted: #7f8c8d;
             --accent-color: #1a365d;
-            --accent-hover: #2a4d7c;
+            --bg-light-blue: #e6f0fa; /* Светло-синий фон для имени */
+            --bg-orange: #ff9f43;     /* Оранжевый фон для специализации */
         }
 
         * {
@@ -55,32 +56,42 @@
             margin: 0 auto 20px;
         }
 
-        /* Стиль для Фамилии заглавными буквами */
-        .last-name {
+        /* Блок имени и фамилии на светло-синем фоне */
+        .name-block {
+            background-color: var(--bg-light-blue);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .first-name {
             font-size: 26px;
-            color: var(--text-main);
+            color: var(--accent-color);
             font-weight: 800;
             letter-spacing: 1px;
             text-transform: uppercase;
             line-height: 1.2;
         }
 
-        /* Стиль для Имени и Отчества под фамилией */
-        .first-name {
+        .last-name {
             font-size: 18px;
             color: var(--text-main);
-            font-weight: 500;
-            margin-top: 4px;
-            margin-bottom: 8px;
+            font-weight: 600;
+            margin-top: 5px;
         }
 
-        .subtitle {
-            font-size: 13px;
-            color: var(--text-muted);
+        /* Блок специализации на оранжевом фоне */
+        .subtitle-block {
+            background-color: var(--bg-orange);
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            font-weight: 700;
             margin-bottom: 25px;
-            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(255, 159, 67, 0.2);
         }
 
         .qr-container {
@@ -150,10 +161,14 @@
 <div class="card">
     <div class="avatar-placeholder">ИН</div>
     
-    <div class="last-name">Николаев</div>
-    <div class="first-name">Илья Викторович</div>
+    <div class="name-block">
+        <div class="first-name">Илья</div>
+        <div class="last-name">Николаев</div>
+    </div>
     
-    <div class="subtitle">Юрист по налогу на недвижимость</div>
+    <div class="subtitle-block">
+        Юрист по недвижимости (налогообложение)
+    </div>
     
     <div class="qr-container">
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://9313351006-bot.github.io/jurist/" alt="QR Контакт">
